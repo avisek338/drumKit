@@ -1,0 +1,11 @@
+randomNumber1 = Math.floor(Math.random()*6)+1;
+randomNumber2 = Math.floor(Math.random()*6)+1;
+var src1 = "images/images/dice" + randomNumber1 + ".png";
+var src2 = "images/images/dice" + randomNumber2 + ".png";
+var image1  = document.querySelectorAll("img")[0];
+var image2  = document.querySelectorAll("img")[1];
+image1.setAttribute("src",src1);
+image2.setAttribute("src",src2);
+if(randomNumber1>randomNumber2) document.querySelector("h1").textContent = "Player 1 win!";
+if(randomNumber1<randomNumber2) document.querySelector("h1").textContent = "Player 2 win!";
+if(randomNumber1 == randomNumber2) document.querySelector("h1").textContent = "Draw!";
